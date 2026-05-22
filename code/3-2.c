@@ -6,13 +6,14 @@ int main(int argc, const char* argv[]){
         return 0;
 
     const char* filename = argv[1];
-    const buffer[10] = {0};
+    char buffer[10] = {0};
 
     FILE* fp = fopen(filename, "r");
     if(fp == NULL)
         return 0;
     
-    fscanf(fp, "%10s", buffer);
+    //fscanf(fp, "%9s", buffer);
+    fgets(buffer, sizeof(buffer), fp);
     fclose(fp);
 
     printf("%s\n", buffer);
