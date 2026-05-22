@@ -33,8 +33,8 @@ int main(int argc, const char* argv[]){
         avg = (float)sum / count;
     }
 
-    printf("max : %d\n", max);
-    printf("avg : %.2f\n", avg);
+    printf("max: %d\n", max);
+    printf("avg: %.2f\n", avg);
 
     fclose(fp);
 
